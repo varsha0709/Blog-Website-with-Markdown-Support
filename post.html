@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post — Markdown Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="site-header sticky">
+    <div class="container header-inner">
+      <a href="posts.html" class="brand">Markdown Blog</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">New Post</a>
+        <a href="posts.html" class="nav-link">All Posts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article id="postContainer" class="post-view">
+      <h1 id="postTitle" class="post-title">Loading…</h1>
+      <p id="postMeta" class="post-meta muted"></p>
+      <div id="postContent" class="prose"></div>
+    </article>
+
+    <div id="notFound" class="empty-state hidden">
+      <h2>Post not found</h2>
+      <p>The post you're looking for doesn't exist or was removed.</p>
+      <a href="posts.html" class="btn primary">Back to all posts</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">Clean reading layout for focused content.</p>
+    </div>
+  </footer>
+
+  <script src="posts.js"></script>
+</body>
+</html>

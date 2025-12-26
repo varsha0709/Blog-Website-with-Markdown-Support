@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Post — Markdown Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- marked.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="site-header sticky">
+    <div class="container header-inner">
+      <a href="posts.html" class="brand">Markdown Blog</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">New Post</a>
+        <a href="posts.html" class="nav-link">All Posts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="editor-layout" aria-label="Markdown editor with live preview">
+      <div class="editor-pane">
+        <div class="pane-header">
+          <h2 class="pane-title">Editor</h2>
+        </div>
+        <form id="postForm" class="editor-form" autocomplete="off">
+          <label class="input-group">
+            <span class="input-label">Post title</span>
+            <input type="text" id="postTitle" placeholder="Enter a clear, descriptive title" required />
+          </label>
+
+          <label class="input-group">
+            <span class="input-label">Markdown content</span>
+            <textarea id="markdownInput" placeholder="# Write your post in Markdown…" rows="16" required></textarea>
+          </label>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Save post</button>
+            <button type="button" id="clearEditor" class="btn ghost">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="preview-pane">
+        <div class="pane-header">
+          <h2 class="pane-title">Live preview</h2>
+        </div>
+        <article id="preview" class="preview-content prose" aria-live="polite" aria-atomic="true">
+          <p>Start typing Markdown to see the rendered preview here.</p>
+          <ul>
+            <li>Headings: # H1, ## H2, ### H3</li>
+            <li>Bold/Italic: **bold**, *italic*</li>
+            <li>Links: [text](https://example.com)</li>
+            <li>Images: ![alt](https://…)</li>
+            <li>Code blocks: triple backticks</li>
+            <li>Lists: -, *, 1.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">Markdown Blog — LocalStorage powered. No backend required.</p>
+    </div>
+  </footer>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+ 
+</html>

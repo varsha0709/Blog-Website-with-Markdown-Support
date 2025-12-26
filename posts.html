@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Posts — Markdown Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- marked.js CDN (optional on list page, not required but kept consistent) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="site-header sticky">
+    <div class="container header-inner">
+      <a href="posts.html" class="brand">Markdown Blog</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">New Post</a>
+        <a href="posts.html" class="nav-link active">All Posts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="list-layout" aria-label="All blog posts">
+      <div class="list-header">
+        <h1>All posts</h1>
+        <div class="list-actions">
+          <a href="index.html" class="btn primary">Create new</a>
+        </div>
+      </div>
+
+      <div id="postsList" class="cards-grid"></div>
+
+      <div id="emptyState" class="empty-state hidden">
+        <h2>No posts yet</h2>
+        <p>Create your first post using the Markdown editor.</p>
+        <a class="btn primary" href="index.html">Write a post</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">Your posts are stored locally and persist across refresh.</p>
+    </div>
+  </footer>
+
+  <script src="posts.js"></script>
+</body>
+</html>
